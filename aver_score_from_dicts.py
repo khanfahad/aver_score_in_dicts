@@ -9,7 +9,7 @@ for _ in range(n):
     name, *line = input("Student & Marks: ").split()
     scores = list(map(float, line))
     for i,j in enumerate(scores):
-        if float(j) <= 0 or float(j) >= 100: # if score is not between 0 and 100, error
+        if float(j) < 0 or float(j) > 100: # if score is not between 0 and 100, error
             error = 1
     if error < 1:
         student_marks[name] = scores # create dict
